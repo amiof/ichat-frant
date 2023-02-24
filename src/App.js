@@ -1,9 +1,9 @@
+import Home from "./components/home/Home";
+
 function App() {
   return (
     <div>
-      <div>
-        <h1 className="font-mono font-bold text-green-600 text-3xl ">ichat - front </h1>
-      </div>
+      <Home></Home>
     </div>
   );
 }
