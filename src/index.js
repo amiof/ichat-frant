@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import { BrowserRouter } from "react-router-dom";
 const clinet = new ApolloClient({
   uri: "http://localhost:3500/graphql",
   cache: new InMemoryCache(),
@@ -10,7 +11,9 @@ const clinet = new ApolloClient({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ApolloProvider client={clinet}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </ApolloProvider>
   // <React.StrictMode>
   // </React.StrictMode>
