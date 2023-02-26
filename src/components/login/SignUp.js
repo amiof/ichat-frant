@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Login() {
+function SignUp() {
   return (
     <div className="flex justify-center items-center bg-slate-900 h-screen ">
       <div className="border border-slate-700 w-96 h-96 rounded-2xl">
@@ -28,21 +28,31 @@ function Login() {
               className="p-1 bg-slate-800 border border-slate-700 ml-4 rounded-lg text-white outline-none hover:outline hover:outline-green-500"
             ></input>
           </div>
-
+          <div className="mt-10 ml-12 block">
+            <label htmlFor="username" className="text-white">
+              email :
+            </label>
+            <input
+              placeholder="email"
+              name="email"
+              type="email"
+              className="p-1 bg-slate-800 border border-slate-700 ml-8 rounded-lg text-white outline-none hover:outline hover:outline-green-500"
+            ></input>
+          </div>
           <div className="flex mt-24   justify-evenly text-white">
-            <Link to="/signup">
+            <Link to="/login">
               <button
                 type="button"
-                className="border border-blue-600 p-2 text-white rounded-xl hover:bg-blue-500"
+                className="border border-green-600 p-2 text-white rounded-xl hover:bg-green-500"
               >
-                sign up
+                login
               </button>
             </Link>
             <button
               type="button"
-              className="border border-green-600 p-2 text-white rounded-xl hover:bg-green-500"
+              className="border border-blue-600 p-2 text-white rounded-xl hover:bg-blue-500"
             >
-              login
+              sign up
             </button>
           </div>
         </div>
@@ -51,4 +61,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default SignUp;
