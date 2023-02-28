@@ -1,17 +1,18 @@
 import React from "react";
 import image from "../../pic/background-pic.jpg";
 import Navbar from "../chatbox-navbar/Navbar";
+import ChatContent from "../chatContent/chatContent";
 import Sendbar from "../sendBar/Sendbar";
 function Chatbox() {
   return (
     <div
-      className="bg-cover w-full h-full bg-no-repeat bg-left text-white flex flex-col items-center"
+      className="bg-cover w-full h-full bg-no-repeat bg-left text-white flex flex-col items-center relative"
       style={{ backgroundImage: `URL(${image})` }}
     >
       <Navbar></Navbar>
-      <div className="w-full h-full border-b-2 border-gray-600 mt-10 max-w-6xl"></div>
-
-      <Sendbar></Sendbar>
+      <Sendbar>
+        <ChatContent className="w-full h-full"></ChatContent>
+      </Sendbar>
     </div>
   );
 }

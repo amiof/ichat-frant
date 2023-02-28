@@ -11,12 +11,18 @@ const GET_USER = gql`
 `;
 
 const GET_ALL_USER = gql`
-  query user($username: String) {
-    users(username: $username) {
+  query {
+    users {
       id
       username
       password
-      rooms
+      rooms {
+        id
+        name
+        endPoint
+        title
+      }
+      token
     }
   }
 `;
@@ -37,5 +43,20 @@ const GET_ROOMS = gql`
     }
   }
 `;
-
-export { GET_ALL_USER, GET_USER, GET_ROOMS };
+const LOGIN = gql`
+  query login($username: String, $password: String) {
+    users(username: $username, password: $password) {
+      id
+      username
+      password
+      rooms {
+        id
+        name
+        endPoint
+        title
+      }
+      token
+    }
+  }
+`;
+export { GET_ALL_USER, GET_USER, GET_ROOMS, LOGIN };

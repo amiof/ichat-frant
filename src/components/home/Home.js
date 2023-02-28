@@ -5,9 +5,9 @@ import { useQuery } from "@apollo/client";
 import { GET_ALL_USER } from "../graphql/query";
 
 function Home() {
-  const res = useQuery(GET_ALL_USER);
-  const { loading, data, error } = res;
-  console.log(loading, data, error);
+  // const res = useQuery(GET_ALL_USER);
+  // const { loading, data, error } = res;
+  // console.log(loading, data, error);
   return (
     <div className="grid grid-cols-8 grid-row-6 h-screen">
       <div className="bg-green-400 col-start-1 col-end-4 row-span-full">
