@@ -16,7 +16,7 @@ function Navb() {
           <p className="ml-3 text-gray-500">{phoneNumber}</p>
         </div>
       </div>
-      <div className="m-5 w-full lg:m-5 ">
+      <div className="m-5  w-full lg:m-5 ">
         <Search></Search>
       </div>
     </div>

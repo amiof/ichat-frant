@@ -5,7 +5,7 @@ import Rooms from "./rooms/rooms";
 
 function Aside() {
   return (
-    <div className="h-[calc(100%-32px)]">
+    <div className="h-[calc(100%-52px)] ">
       <Navb></Navb>
       <div className="mt-8">
         <GChanel></GChanel>

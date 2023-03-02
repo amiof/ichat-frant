@@ -56,6 +56,7 @@ const LOGIN = gql`
         name
         endPoint
         title
+        pic
       }
       token
       refreshToken
