@@ -50,6 +50,7 @@ const LOGIN = gql`
       username
       password
       phoneNumber
+      pic
       rooms {
         id
         name
