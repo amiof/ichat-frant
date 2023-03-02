@@ -9,11 +9,11 @@ function Home() {
   // const { loading, data, error } = res;
   // console.log(loading, data, error);
   return (
-    <div className="grid grid-cols-8 grid-row-6 h-screen">
-      <div className="bg-green-400 col-start-1 col-end-4 row-span-full">
+    <div className="sm:grid sm:grid-cols-8 sm:grid-row-6 sm:h-screen ">
+      <div className="hidden sm:bg-slate-900 sm:col-start-1 sm:col-end-4 sm:row-span-full sm:block  ">
         <Aside></Aside>
       </div>
-      <div className=" col-start-4 col-span-full row-span-full">
+      <div className=" sm:col-start-4 sm:col-span-full sm:row-span-full">
         <Chatbox></Chatbox>
       </div>
     </div>

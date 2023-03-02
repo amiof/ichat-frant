@@ -5,10 +5,13 @@ import Rooms from "./rooms/rooms";
 
 function Aside() {
   return (
-    <div className="h-screen">
+    <div className="h-[calc(100%-32px)]">
       <Navb></Navb>
-      <GChanel></GChanel>
-      <Rooms className="h-screen"></Rooms>
+      <div className="mt-8">
+        <GChanel></GChanel>
+      </div>
+
+      <Rooms></Rooms>
     </div>
   );
 }
