@@ -1,5 +1,6 @@
 import { useLazyQuery } from "@apollo/client";
 import React, { useState } from "react";
+import { useCookies } from "react-cookie";
 import { Link, useNavigate } from "react-router-dom";
 import { LOGIN } from "../graphql/query";
 
@@ -13,7 +14,12 @@ function Login() {
     setUsername(e.target.value);
   };
   const [fetchQuery, { data }] = useLazyQuery(LOGIN);
+
   // console.log(error, loading);
+  const [cookie, setCookie] = useCookies("userData");
+
+  setCookie("userData", data);
+  console.log(cookie);
   const SendHandler = () => {
     if (username && password) {
       fetchQuery({ variables: { username, password }, nextFetchPolicy: "standby" });

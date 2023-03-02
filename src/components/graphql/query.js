@@ -49,6 +49,7 @@ const LOGIN = gql`
       id
       username
       password
+      phoneNumber
       rooms {
         id
         name
@@ -56,6 +57,7 @@ const LOGIN = gql`
         title
       }
       token
+      refreshToken
     }
   }
 `;

@@ -1,8 +1,8 @@
 import React from "react";
 import Aside from "../aside/Aside";
 import Chatbox from "../ChatBox/Chatbox";
-import { useQuery } from "@apollo/client";
-import { GET_ALL_USER } from "../graphql/query";
+// import { useQuery } from "@apollo/client";
+// import { GET_ALL_USER } from "../graphql/query";
 
 function Home() {
   // const res = useQuery(GET_ALL_USER);
