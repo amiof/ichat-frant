@@ -2,7 +2,7 @@ import React from "react";
 
 function Room({ room }) {
   const { name, id, endpoint, title, pic } = room;
-  console.log(room);
+  // console.log(room);
   return (
     <div className="flex">
       <img

@@ -3,10 +3,9 @@ import { useCookies } from "react-cookie";
 import picProfile from "../../../pic/egg.webp";
 import Search from "./searchBar/Search";
 
-function Navb() {
+function Navb({ search }) {
   const [cookies, setCookies] = useCookies("userData");
   const { username, phoneNumber, pic } = cookies.userData.users[0];
-
   return (
     <div className="bg-gray-900 h-20 w-full  flex flex-col lg:flex-row justify-between items-center mx-auto  ">
       <div className=" flex lg:item-center justify-evenly w-full lg:justify-start">
@@ -17,7 +16,7 @@ function Navb() {
         </div>
       </div>
       <div className="m-5  w-full lg:m-5 ">
-        <Search></Search>
+        <Search search={search}></Search>
       </div>
     </div>
   );
