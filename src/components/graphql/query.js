@@ -63,4 +63,21 @@ const LOGIN = gql`
     }
   }
 `;
-export { GET_ALL_USER, GET_USER, GET_ROOMS, LOGIN };
+const GET_ROOM_BYP_PLUG = gql`
+  query getRoom($endPoint: String!) {
+    rooms(endPoint: $endPoint) {
+      id
+      name
+      pic
+      title
+      endPoint
+      description
+      messages {
+        id
+        sender
+        message
+      }
+    }
+  }
+`;
+export { GET_ALL_USER, GET_USER, GET_ROOMS, LOGIN, GET_ROOM_BYP_PLUG };

@@ -1,4 +1,3 @@
-import localStorage, { get } from "local-storage";
 import { useCookies } from "react-cookie";
 import Room from "./room";
 
