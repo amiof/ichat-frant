@@ -10,7 +10,7 @@ function Navb({ search }) {
     <div className="bg-gray-900 h-20 w-full  flex flex-col lg:flex-row justify-between items-center mx-auto  ">
       <div className=" flex lg:item-center justify-evenly w-full lg:justify-start">
         <img src={pic} className="w-14 h-14 rounded-full ml-5" alt="profilePic"></img>
-        <div>
+        <div className="min-w-fit">
           <p className="ml-3 text-white">{username} </p>
           <p className="ml-3 text-gray-500">{phoneNumber}</p>
         </div>
