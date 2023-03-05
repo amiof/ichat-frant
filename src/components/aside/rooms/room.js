@@ -15,7 +15,7 @@ function Room({ room }) {
           alt="roomPic"
         ></img>
         <div className="hidden absolute z-20 bottom-[-190px] right-[-150px]  group-hover:inline group-target:inline ">
-          <Menubar></Menubar>
+          <Menubar roomDetail={room}></Menubar>
         </div>
       </div>
       <div className="flex flex-col ml-5">

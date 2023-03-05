@@ -3,7 +3,8 @@ import trashPic from "../../../pic/menubar/remove2.png";
 import addUser from "../../../pic/menubar/adduser.png";
 import addPic from "../../../pic/menubar/addpic.png";
 import add from "../../../pic/menubar/add.png";
-function Menubar() {
+function Menubar({ roomDetail }) {
+  const { id, name } = roomDetail;
   return (
     <div className="bg-slate-800 w-44 h-48 border border-gray-700 rounded-2xl flex flex-col items-center ">
       <ul className=" mt-3 w-full">
