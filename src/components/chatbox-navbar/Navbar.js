@@ -7,8 +7,8 @@ function Navbar() {
   const params = useParams();
   const plug = "/" + params["*"];
   const [fetchData, { data }] = useLazyQuery(GET_ROOM_BYP_PLUG);
-  console.log("plug", plug);
-  console.log("data:", data);
+  // console.log("plug", plug);
+  // console.log("data:", data);
   let name, pic, title;
   if (data) {
     name = data.rooms[0].name;

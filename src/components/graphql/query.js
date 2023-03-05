@@ -80,4 +80,37 @@ const GET_ROOM_BYP_PLUG = gql`
     }
   }
 `;
-export { GET_ALL_USER, GET_USER, GET_ROOMS, LOGIN, GET_ROOM_BYP_PLUG };
+const GET_All_DATA_FOR_USER = gql`
+  query ($username: String) {
+    users(username: $username) {
+      id
+      username
+      password
+      pic
+      phoneNumber
+      nameSpace {
+        id
+        pic
+        name
+        title
+        rooms
+      }
+      rooms {
+        id
+        name
+        endPoint
+        title
+        pic
+        description
+        messages {
+          id
+          sender
+          message
+        }
+      }
+      token
+      refreshToken
+    }
+  }
+`;
+export { GET_ALL_USER, GET_USER, GET_ROOMS, LOGIN, GET_ROOM_BYP_PLUG, GET_All_DATA_FOR_USER };
