@@ -5,7 +5,7 @@ import addPic from "../../../pic/menubar/addpic.png";
 import add from "../../../pic/menubar/add.png";
 function Menubar() {
   return (
-    <div className="bg-slate-800 w-40 h-48 border border-gray-700 rounded-2xl flex flex-col items-center ">
+    <div className="bg-slate-800 w-44 h-48 border border-gray-700 rounded-2xl flex flex-col items-center ">
       <ul className=" mt-3 w-full">
         <li className="flex  mx-5 my-3  ">
           <div>
@@ -23,7 +23,7 @@ function Menubar() {
           <div>
             <img src={addUser} className="w-6 h-6"></img>
           </div>
-          <p className=" hover:text-red-500 ml-2 mr-2">add group </p>
+          <p className=" hover:text-red-500 ml-2 mr-2">add to group</p>
         </li>
         <li className="flex my-3 mx-5">
           <div>
