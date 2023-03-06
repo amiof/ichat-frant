@@ -11,7 +11,7 @@ function Room({ room }) {
       <div className="relative group">
         <img
           src={pic}
-          className="h-14 w-14 rounded-full outline outline-slate-400 relative "
+          className="h-14 w-14 rounded-full outline outline-slate-400 relative hover:outline-red-600"
           alt="roomPic"
         ></img>
         <div className="hidden absolute z-20 bottom-[-190px] right-[-150px]  group-hover:inline group-target:inline ">

@@ -11,18 +11,25 @@ const createNamespace = gql`
     }
   }
 `;
-const createUser = gql`
-  mutation {
-    createUser(username: "amiefd3", password: "12345", phoneNumber: "09127234793") {
+const SINGUP = gql`
+  mutation singup($username: String, $password: String, $phoneNumber: String) {
+    createUser(username: $username, password: $password, phoneNumber: $phoneNumber) {
       username
       id
       password
       phoneNumber
-      nameSpace
-      rooms
+      nameSpace {
+        id
+        name
+      }
+      rooms {
+        id
+        name
+        endPoint
+      }
       token
       refreshToken
     }
   }
 `;
-export { createNamespace, createUser };
+export { createNamespace, SINGUP };
