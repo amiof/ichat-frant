@@ -10,25 +10,25 @@ function Menubar({ roomDetail }) {
       <ul className=" mt-3 w-full">
         <li className="flex  mx-5 my-3  ">
           <div>
-            <img src={addPic} className="w-6 h-6 "></img>
+            <img src={addPic} className="w-6 h-6 " alt="addpic"></img>
           </div>
           <p className=" hover:text-red-600 ml-2 mr-2">edit pic </p>
         </li>
         <li className="flex my-3  mx-5">
           <div>
-            <img src={add} className="w-6 h-6"></img>
+            <img src={add} className="w-6 h-6" alt="add"></img>
           </div>
           <p className=" hover:text-red-600 ml-2 mr-2">edite title </p>
         </li>
         <li className="flex my-3  mx-5">
           <div>
-            <img src={addUser} className="w-6 h-6"></img>
+            <img src={addUser} className="w-6 h-6" alt="adduser"></img>
           </div>
           <p className=" hover:text-red-600 ml-2 mr-2">add to group</p>
         </li>
         <li className="flex my-3 mx-5">
           <div>
-            <img src={trashPic} className="w-6 h-6"></img>
+            <img src={trashPic} className="w-6 h-6" alt="trashpic"></img>
           </div>
           <p className=" hover:text-red-600 ml-2 mr-2">remove </p>
         </li>
