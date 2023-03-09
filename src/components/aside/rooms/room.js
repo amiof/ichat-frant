@@ -14,7 +14,7 @@ function Room({ room, settselector, selectedColor }) {
 
   return (
     <Link to={endPoint} onClick={clickHandler}>
-      <div className={selected && id == selectedColor ? "flex bg-violet-800 rounded-3xl" : "flex"}>
+      <div className={selected && id == selectedColor ? "flex bg-violet-900 rounded-3xl" : "flex"}>
         <div className="relative group">
           <img
             src={pic}

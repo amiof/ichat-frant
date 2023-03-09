@@ -1,6 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { useParams } from "react-router-dom";
+import { user_Data } from "../home/Home";
+
 export const messageContext = React.createContext();
 function Sendbar({ children }) {
+  const plug = useParams();
+  const endPoint = "/" + plug["*"];
+  const { data, socketio } = useContext(user_Data);
+  let username;
+
+  if (data) {
+    username = data?.users[0].username;
+  }
   const [message, setmessage] = useState("");
   const [click, setClick] = useState("");
   const changeHandler = (e) => {
@@ -9,6 +20,7 @@ function Sendbar({ children }) {
 
   const clickHandler = () => {
     setClick(message);
+    socketio.emit("message", [username, endPoint, message]);
   };
   return (
     <>
