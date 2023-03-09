@@ -7,10 +7,10 @@ function Sendbar({ children }) {
   const plug = useParams();
   const endPoint = "/" + plug["*"];
   const { data, socketio } = useContext(user_Data);
-  let username;
+  let userId;
 
   if (data) {
-    username = data?.users[0].username;
+    userId = data?.users[0].id;
   }
   const [message, setmessage] = useState("");
   const [click, setClick] = useState("");
@@ -20,7 +20,7 @@ function Sendbar({ children }) {
 
   const clickHandler = () => {
     setClick(message);
-    socketio.emit("message", [username, endPoint, message]);
+    socketio.emit("message", [userId, endPoint, message]);
   };
   return (
     <>
