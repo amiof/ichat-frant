@@ -13,9 +13,9 @@ function Home() {
   // console.log("userdata:", cookies);
   const { username } = cookies?.userData.users[0];
   const { data } = useQuery(GET_All_DATA_FOR_USER, { variables: { username } });
-  // console.log(data);
+  socketio.emit("login", username);
   return (
-    <user_Data.Provider value={{ data, socketio }}>
+    <user_Data.Provider value={{ dataUser: data, socketio }}>
       <div className="sm:grid sm:grid-cols-10 sm:grid-row-6 sm:h-screen ">
         <div className="hidden sm:bg-gray-900 sm:col-start-1 sm:col-end-4 sm:row-span-full sm:block  ">
           <Aside></Aside>

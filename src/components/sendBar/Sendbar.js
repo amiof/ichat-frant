@@ -6,11 +6,11 @@ export const messageContext = React.createContext();
 function Sendbar({ children }) {
   const plug = useParams();
   const endPoint = "/" + plug["*"];
-  const { data, socketio } = useContext(user_Data);
+  const { dataUser, socketio } = useContext(user_Data);
   let userId;
 
-  if (data) {
-    userId = data?.users[0].id;
+  if (dataUser) {
+    userId = dataUser?.users[0].id;
   }
   const [message, setmessage] = useState("");
   const [click, setClick] = useState("");
