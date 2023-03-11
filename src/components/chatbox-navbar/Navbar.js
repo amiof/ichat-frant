@@ -13,7 +13,7 @@ function Navbar() {
   setInterval(() => {
     let count = counter + 1;
     setCounter(count);
-  }, 20000);
+  }, 60000);
 
   const [cookies, setCookies] = useCookies("userData");
   const username = cookies.userData.users[0].username;
