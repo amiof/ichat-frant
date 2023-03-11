@@ -27,8 +27,8 @@ const GET_ALL_USER = gql`
   }
 `;
 const GET_ROOMS = gql`
-  query {
-    rooms {
+  query room($plug: String) {
+    rooms(endPoint: $plug) {
       id
       name
       pic
