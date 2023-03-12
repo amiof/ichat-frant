@@ -10,8 +10,8 @@ function Message(prop) {
       <h1
         className={
           userId == sender
-            ? "text-xl bg-blue-700 max-h-fit max-w-fit p-2 mr-10  mt-5 rounded-3xl"
-            : "text-xl bg-green-700 max-h-fit max-w-fit p-2 mr-10  mt-5 rounded-3xl"
+            ? "text-xl bg-gradient-to-r from-violet-500 to-fuchsia-500 max-h-fit max-w-fit p-2 mr-10  mt-5 rounded-3xl"
+            : "text-xl bg-gradient-to-r from-green-600 to-blue-500 max-h-fit max-w-fit p-2 mr-10  mt-5 rounded-3xl"
         }
       >
         {message}

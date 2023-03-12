@@ -6,7 +6,7 @@ import Sendbar from "../sendBar/Sendbar";
 function Chatbox() {
   return (
     <div
-      className="bg-cover w-full h-full bg-no-repeat bg-left text-white flex flex-col items-center relative"
+      className="bg-cover w-full h-full bg-no-repeat  bg-left text-white flex flex-col items-center relative"
       style={{ backgroundImage: `URL(${image})` }}
     >
       <Navbar></Navbar>
