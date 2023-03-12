@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useCookies } from "react-cookie";
 import Room from "./room";
 import penPic from "../../../pic/pen2.svg";
@@ -6,9 +6,11 @@ import closePic from "../../../pic/close.svg";
 import singleMessagePic from "../../../pic/singlePerson.svg";
 import groupAddPic from "../../../pic/groupAdd.svg";
 import speakerPic from "../../../pic/speaker.svg";
+import { user_Data } from "../../home/Home";
 function Rooms({ search }) {
   // console.log(search);
   const [cookies] = useCookies("userData");
+  const { setModal } = useContext(user_Data);
   const [selectedColor, setSelectedColor] = useState("");
   const [showMenu, setShowMenu] = useState(false);
   const rooms = cookies.userData.users[0].rooms;
@@ -53,15 +55,21 @@ function Rooms({ search }) {
         >
           <div className="flex my-3 ml-8  hover:bg-gray-900 max-w-fit p-2 rounded-3xl">
             <img src={speakerPic} alt="speaker pic" className="w-4 h-4 mt-2 ml-2" />
-            <button className="text-white ml-2 ">new channel</button>
+            <button className="text-white ml-2 " onClick={setModal}>
+              new channel
+            </button>
           </div>
           <div className="flex my-2 ml-8 hover:bg-gray-900 max-w-fit p-2 rounded-3xl">
             <img src={groupAddPic} alt="add group pic" className="w-8 h-8" />
-            <button className="text-white ml-2">new group</button>
+            <button className="text-white ml-2" onClick={setModal}>
+              new group
+            </button>
           </div>
           <div className="flex my-2 ml-8 mb-2 hover:bg-gray-900 max-w-fit p-2 rounded-3xl">
             <img src={singleMessagePic} alt="message pic" className="w-8 h-8" />
-            <button className="text-white ml-2">new message</button>
+            <button className="text-white ml-2" onClick={setModal}>
+              new message
+            </button>
           </div>
         </div>
       </div>

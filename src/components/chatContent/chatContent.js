@@ -32,7 +32,7 @@ function ChatContent() {
   };
   useEffect(() => {
     cleanMessage();
-    console.log(endPoint);
+    // console.log(endPoint);
     getData();
     const lastMessages = data?.rooms[0]?.messages;
     const payloadArray = [];
