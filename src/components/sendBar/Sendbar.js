@@ -17,14 +17,19 @@ function Sendbar({ children }) {
   const changeHandler = (e) => {
     setmessage(e.target.value);
   };
+  const [serverMessage, setServerMessage] = useState({});
+  socketio.on("serverMessage", (data) => {
+    setServerMessage(data);
+  });
 
   const clickHandler = () => {
-    setClick(message);
+    setClick({ userId, endPoint, message });
     socketio.emit("message", [userId, endPoint, message]);
   };
+
   return (
     <>
-      <messageContext.Provider value={click}>{children}</messageContext.Provider>
+      <messageContext.Provider value={{ click, serverMessage }}>{children}</messageContext.Provider>
       <div className=" w-full flex items-center justify-center my-5 ">
         <input
           value={message}
