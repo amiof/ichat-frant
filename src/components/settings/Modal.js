@@ -1,4 +1,5 @@
 import React from "react";
+import AddChannel from "./AddChannel";
 
 function Modal({ open, children, close }) {
   if (!open) return <div>{children}</div>;
@@ -10,6 +11,7 @@ function Modal({ open, children, close }) {
         <button onClick={close} className="text-red-600 font-bold ml-5">
           x
         </button>
+        <AddChannel></AddChannel>
       </div>
     </>
   );

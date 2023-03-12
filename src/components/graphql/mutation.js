@@ -32,4 +32,14 @@ const SINGUP = gql`
     }
   }
 `;
-export { createNamespace, SINGUP };
+const CREATE_ROOM = gql`
+  mutation createRoom($name: String, $title: String, $endPoint: String, $description: String) {
+    createRoom(name: $name, title: $title, endPoint: $endPoint, description: $description) {
+      id
+      title
+      endPoint
+      description
+    }
+  }
+`;
+export { createNamespace, SINGUP, CREATE_ROOM };
