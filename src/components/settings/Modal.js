@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 import AddChannel from "./AddChannel";
-
 function Modal({ open, children, close }) {
   if (!open) return <div>{children}</div>;
   return (

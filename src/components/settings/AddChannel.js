@@ -1,5 +1,6 @@
 import { useMutation } from "@apollo/client";
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 import { CREATE_ROOM } from "../graphql/mutation";
 
 function AddChannel() {
@@ -14,6 +15,16 @@ function AddChannel() {
   const clickHnadler = () => {
     fetchData();
   };
+  toast.success("message", {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
+  });
   return (
     <div className="flex items-center flex-col ">
       <label></label>

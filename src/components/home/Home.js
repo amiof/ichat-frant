@@ -6,6 +6,8 @@ import { GET_All_DATA_FOR_USER } from "../graphql/query";
 import { useCookies } from "react-cookie";
 import socketIO from "socket.io-client";
 import Modal from "../settings/Modal";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const socketio = socketIO.connect("http://localhost:3500");
 export const user_Data = createContext();
@@ -21,6 +23,19 @@ function Home() {
   };
   return (
     <>
+      <ToastContainer
+        className="z-50"
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      ></ToastContainer>
       <Modal
         open={showModal}
         close={() => {
