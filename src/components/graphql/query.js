@@ -45,7 +45,7 @@ const GET_ROOMS = gql`
 `;
 const LOGIN = gql`
   query login($username: String, $password: String) {
-    users(username: $username, password: $password) {
+    login(username: $username, password: $password) {
       id
       username
       password

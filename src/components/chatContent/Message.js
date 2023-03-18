@@ -4,7 +4,7 @@ import { useCookies } from "react-cookie";
 function Message(prop) {
   const { id, sender, message } = prop.messages;
   const [cookies, setCookies] = useCookies("userData");
-  const userId = cookies.userData.users[0].id;
+  const userId = cookies.userData.login[0].id;
   return (
     <div className={userId == sender ? "flex flex-row-reverse" : "flex flex-row"}>
       <h1

@@ -5,7 +5,7 @@ import Search from "./searchBar/Search";
 
 function Navb({ search }) {
   const [cookies, setCookies] = useCookies("userData");
-  const { username, phoneNumber, pic } = cookies.userData.users[0];
+  const { username, phoneNumber, pic } = cookies.userData.login[0];
   return (
     <div className="bg-gray-900 h-20 w-full  flex flex-col lg:flex-row justify-between items-center mx-auto  ">
       <div className=" flex lg:item-center justify-evenly w-full lg:justify-start">

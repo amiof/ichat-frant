@@ -13,7 +13,7 @@ function Rooms({ search }) {
   const { setModal } = useContext(user_Data);
   const [selectedColor, setSelectedColor] = useState("");
   const [showMenu, setShowMenu] = useState(false);
-  const rooms = cookies.userData.users[0].rooms;
+  const rooms = cookies.userData.login[0].rooms;
   const settselector = (id) => {
     setSelectedColor(id);
   };

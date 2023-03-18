@@ -25,6 +25,7 @@ function Sendbar({ children }) {
   const clickHandler = () => {
     setClick({ userId, endPoint, message });
     socketio.emit("message", [userId, endPoint, message]);
+    setmessage("");
   };
 
   return (

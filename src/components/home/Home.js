@@ -15,7 +15,7 @@ function Home() {
   const [cookies, setCookies] = useCookies("userData");
   const [showModal, setShowModal] = useState(false);
   // console.log("userdata:", cookies);
-  const { username } = cookies?.userData.users[0];
+  const { username } = cookies?.userData.login[0];
   const { data } = useQuery(GET_All_DATA_FOR_USER, { variables: { username } });
   socketio.emit("login", username);
   const setModal = () => {

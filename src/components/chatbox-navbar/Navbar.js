@@ -16,7 +16,7 @@ function Navbar() {
   }, 60000);
 
   const [cookies, setCookies] = useCookies("userData");
-  const username = cookies.userData.users[0].username;
+  const username = cookies.userData.login[0].username;
   socketio.on("connect_error", (error) => {
     SetConnectionStatus("server Connecting error...");
   });

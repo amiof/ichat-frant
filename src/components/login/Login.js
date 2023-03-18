@@ -17,8 +17,8 @@ function Login() {
 
   // console.log(error, loading);
   const [cookie, setCookie] = useCookies("userData");
-
   setCookie("userData", data);
+  console.log(data);
   // console.log(cookie);
   const SendHandler = () => {
     if (username && password) {
@@ -28,7 +28,7 @@ function Login() {
     }
   };
   const navigate = useNavigate();
-  if (data?.users?.length > 0) {
+  if (data?.login?.length > 0) {
     navigate("/");
   }
   // console.log(data?.users);
