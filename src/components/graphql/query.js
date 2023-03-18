@@ -26,6 +26,15 @@ const GET_ALL_USER = gql`
     }
   }
 `;
+const GET_USER_BYId = gql`
+  query userById($id: ID) {
+    users(_id: $id) {
+      id
+      pic
+      username
+    }
+  }
+`;
 const GET_ROOMS = gql`
   query room($plug: String) {
     rooms(endPoint: $plug) {
@@ -113,4 +122,12 @@ const GET_All_DATA_FOR_USER = gql`
     }
   }
 `;
-export { GET_ALL_USER, GET_USER, GET_ROOMS, LOGIN, GET_ROOM_BYP_PLUG, GET_All_DATA_FOR_USER };
+export {
+  GET_ALL_USER,
+  GET_USER,
+  GET_ROOMS,
+  LOGIN,
+  GET_ROOM_BYP_PLUG,
+  GET_All_DATA_FOR_USER,
+  GET_USER_BYId,
+};
