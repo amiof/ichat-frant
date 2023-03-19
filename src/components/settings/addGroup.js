@@ -1,7 +1,7 @@
 import React from "react";
 
-function addGroup() {
+function AddGroup() {
   return <div>addGroup</div>;
 }
 
-export default addGroup;
+export default AddGroup;

@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import AddChannel from "./AddChannel";
-function Modal({ open, children, close }) {
+import AddGroup from "./addGroup";
+import AddUserToGroup from "./addUserToGroup";
+import EditPic from "./editPic";
+import EditTitle from "./editTitle";
+import NewMessage from "./newMessage";
+import Remove from "./Remove";
+
+function Modal({ open, children, close, componentModal }) {
+  // console.log(componentModal);
   if (!open) return <div>{children}</div>;
   return (
     <>
@@ -11,7 +19,13 @@ function Modal({ open, children, close }) {
         <button onClick={close} className="text-red-600 font-bold ml-5">
           x
         </button>
-        <AddChannel></AddChannel>
+        {componentModal == "AddChannel" ? <AddChannel></AddChannel> : null}
+        {componentModal == "AddUserToGroup" ? <AddUserToGroup></AddUserToGroup> : null}
+        {componentModal == "editPic" ? <EditPic></EditPic> : null}
+        {componentModal == "editTitle" ? <EditTitle></EditTitle> : null}
+        {componentModal == "remove" ? <Remove></Remove> : null}
+        {componentModal == "newMessage" ? <NewMessage></NewMessage> : null}
+        {componentModal == "newGroup" ? <AddGroup></AddGroup> : null}
       </div>
     </>
   );

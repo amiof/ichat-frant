@@ -5,7 +5,7 @@ import addPic from "../../../pic/menubar/addpic.png";
 import add from "../../../pic/menubar/add.png";
 import { user_Data } from "../../home/Home";
 function Menubar({ roomDetail }) {
-  const { setModal } = useContext(user_Data);
+  const { setModal, setComponentModal } = useContext(user_Data);
   const { id, name } = roomDetail;
   return (
     <div className="bg-slate-800 w-44 h-48 border border-gray-700 rounded-2xl flex flex-col items-center ">
@@ -14,7 +14,13 @@ function Menubar({ roomDetail }) {
           <div>
             <img src={addPic} className="w-6 h-6 " alt="addpic"></img>
           </div>
-          <p className=" hover:text-red-600 ml-2 mr-2" onClick={setModal}>
+          <p
+            className=" hover:text-red-600 ml-2 mr-2"
+            onClick={() => {
+              setModal();
+              setComponentModal("editPic");
+            }}
+          >
             edit pic{" "}
           </p>
         </li>
@@ -22,7 +28,13 @@ function Menubar({ roomDetail }) {
           <div>
             <img src={add} className="w-6 h-6" alt="add"></img>
           </div>
-          <p className=" hover:text-red-600 ml-2 mr-2" onClick={setModal}>
+          <p
+            className=" hover:text-red-600 ml-2 mr-2"
+            onClick={() => {
+              setModal();
+              setComponentModal("editTitle");
+            }}
+          >
             edite title{" "}
           </p>
         </li>
@@ -30,7 +42,13 @@ function Menubar({ roomDetail }) {
           <div>
             <img src={addUser} className="w-6 h-6" alt="adduser"></img>
           </div>
-          <p className=" hover:text-red-600 ml-2 mr-2" onClick={setModal}>
+          <p
+            className=" hover:text-red-600 ml-2 mr-2"
+            onClick={() => {
+              setModal();
+              setComponentModal("AddUserToGroup");
+            }}
+          >
             add to group
           </p>
         </li>
@@ -38,7 +56,13 @@ function Menubar({ roomDetail }) {
           <div>
             <img src={trashPic} className="w-6 h-6" alt="trashpic"></img>
           </div>
-          <p className=" hover:text-red-600 ml-2 mr-2" onClick={setModal}>
+          <p
+            className=" hover:text-red-600 ml-2 mr-2"
+            onClick={() => {
+              setModal();
+              setComponentModal("remove");
+            }}
+          >
             remove{" "}
           </p>
         </li>

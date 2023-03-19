@@ -4,4 +4,4 @@ const EditPic = () => {
   return <div>EditPiceditPic</div>;
 };
 
-export default EditPiceditPic;
+export default EditPic;

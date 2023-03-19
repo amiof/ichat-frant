@@ -11,11 +11,11 @@ function AddChannel() {
   const [fetchData, { data, error }] = useMutation(CREATE_ROOM, {
     variables: { name: channelName, endPoint, title: Title, description },
   });
-  console.log(data);
+  // console.log(data);
   const clickHnadler = () => {
     fetchData();
   };
-  toast.success("message", {
+  toast.success("please insert info", {
     position: "top-right",
     autoClose: 5000,
     hideProgressBar: false,
@@ -27,7 +27,6 @@ function AddChannel() {
   });
   return (
     <div className="flex items-center flex-col ">
-      <label></label>
       <input
         value={channelName}
         onChange={(e) => {

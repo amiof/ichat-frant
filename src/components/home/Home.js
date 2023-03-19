@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 const socketio = socketIO.connect("http://localhost:3500");
 export const user_Data = createContext();
 function Home() {
+  const [componentModal, setComponentModal] = useState("");
   const [cookies, setCookies] = useCookies("userData");
   const [showModal, setShowModal] = useState(false);
   // console.log("userdata:", cookies);
@@ -41,8 +42,9 @@ function Home() {
         close={() => {
           setShowModal(false);
         }}
+        componentModal={componentModal}
       >
-        <user_Data.Provider value={{ dataUser: data, socketio, setModal }}>
+        <user_Data.Provider value={{ dataUser: data, socketio, setModal, setComponentModal }}>
           <div className="sm:grid sm:grid-cols-10 sm:grid-row-6 sm:h-screen ">
             <div className="hidden sm:bg-gray-900 sm:col-start-1 sm:col-end-4 sm:row-span-full sm:block  ">
               <Aside></Aside>

@@ -42,4 +42,20 @@ const CREATE_ROOM = gql`
     }
   }
 `;
-export { createNamespace, SINGUP, CREATE_ROOM };
+const ADD_USER_IN_ROOM = gql`
+  mutation addUserInRoom($username: String, $endPoint: Striong) {
+    addUserInRoom(username: $username, endPoint: $endPoint) {
+      username
+      id
+      password
+      rooms {
+        pic
+        endPoint
+        name
+        description
+      }
+      phoneNumber
+    }
+  }
+`;
+export { createNamespace, SINGUP, CREATE_ROOM, ADD_USER_IN_ROOM };

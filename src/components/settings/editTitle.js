@@ -1,7 +1,7 @@
 import React from "react";
 
-const EditeTitle = () => {
+const EditTitle = () => {
   return <div>EditeTitle</div>;
 };
 
-export default EditeTitle;
+export default EditTitle;

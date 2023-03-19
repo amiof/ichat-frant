@@ -10,7 +10,7 @@ import { user_Data } from "../../home/Home";
 function Rooms({ search }) {
   // console.log(search);
   const [cookies] = useCookies("userData");
-  const { setModal } = useContext(user_Data);
+  const { setModal, setComponentModal } = useContext(user_Data);
   const [selectedColor, setSelectedColor] = useState("");
   const [showMenu, setShowMenu] = useState(false);
   const rooms = cookies.userData.login[0].rooms;
@@ -55,19 +55,37 @@ function Rooms({ search }) {
         >
           <div className="flex my-3 ml-8  hover:bg-gray-900 max-w-fit p-2 rounded-3xl">
             <img src={speakerPic} alt="speaker pic" className="w-4 h-4 mt-2 ml-2" />
-            <button className="text-white ml-2 " onClick={setModal}>
+            <button
+              className="text-white ml-2 "
+              onClick={() => {
+                setModal();
+                setComponentModal("AddChannel");
+              }}
+            >
               new channel
             </button>
           </div>
           <div className="flex my-2 ml-8 hover:bg-gray-900 max-w-fit p-2 rounded-3xl">
             <img src={groupAddPic} alt="add group pic" className="w-8 h-8" />
-            <button className="text-white ml-2" onClick={setModal}>
+            <button
+              className="text-white ml-2"
+              onClick={() => {
+                setModal();
+                setComponentModal("newGroup");
+              }}
+            >
               new group
             </button>
           </div>
           <div className="flex my-2 ml-8 mb-2 hover:bg-gray-900 max-w-fit p-2 rounded-3xl">
             <img src={singleMessagePic} alt="message pic" className="w-8 h-8" />
-            <button className="text-white ml-2" onClick={setModal}>
+            <button
+              className="text-white ml-2"
+              onClick={() => {
+                setModal();
+                setComponentModal("newMessage");
+              }}
+            >
               new message
             </button>
           </div>
