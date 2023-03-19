@@ -15,11 +15,8 @@ function Login() {
   };
   const [fetchQuery, { data }] = useLazyQuery(LOGIN);
 
-  // console.log(error, loading);
   const [cookie, setCookie] = useCookies("userData");
   setCookie("userData", data);
-  console.log(data);
-  // console.log(cookie);
   const SendHandler = () => {
     if (username && password) {
       fetchQuery({ variables: { username, password }, nextFetchPolicy: "standby" });
@@ -31,7 +28,6 @@ function Login() {
   if (data?.login?.length > 0) {
     navigate("/");
   }
-  // console.log(data?.users);
   return (
     <div className="flex justify-center items-center bg-slate-900 h-screen ">
       <div className="border border-slate-700 w-96 h-96 rounded-2xl">

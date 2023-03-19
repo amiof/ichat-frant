@@ -43,7 +43,7 @@ const CREATE_ROOM = gql`
   }
 `;
 const ADD_USER_IN_ROOM = gql`
-  mutation addUserInRoom($username: String, $endPoint: Striong) {
+  mutation addUserInRoom($username: String, $endPoint: String) {
     addUserInRoom(username: $username, endPoint: $endPoint) {
       username
       id
