@@ -33,7 +33,7 @@ function AddChannel() {
           setChannelName(e.target.value);
         }}
         placeholder="name channel"
-        className="p-2 mt-5 bg-gray-800 rounded-2xl w-3/4 text-white font-medium text-lg  focus:outline focus:outline-slate-700"
+        className="p-2 mt-5 bg-gray-800 rounded-2xl w-3/4 text-white font-medium text-lg  focus:outline focus:outline-green-600"
       />
 
       <input
@@ -42,7 +42,7 @@ function AddChannel() {
           setEndPint(e.target.value);
         }}
         placeholder="endPoint"
-        className="p-2 mt-5 bg-gray-800 rounded-2xl w-3/4 text-white font-medium text-lg  focus:outline focus:outline-slate-700"
+        className="p-2 mt-5 bg-gray-800 rounded-2xl w-3/4 text-white font-medium text-lg  focus:outline focus:outline-green-600"
       />
       <input
         value={Title}
@@ -50,7 +50,7 @@ function AddChannel() {
           setTitle(e.target.value);
         }}
         placeholder="Title"
-        className="p-2 mt-5 bg-gray-800 rounded-2xl w-3/4 text-white font-medium text-lg  focus:outline focus:outline-slate-700"
+        className="p-2 mt-5 bg-gray-800 rounded-2xl w-3/4 text-white font-medium text-lg  focus:outline focus:outline-green-600"
       />
       <input
         value={description}
@@ -58,7 +58,7 @@ function AddChannel() {
           setDescription(e.target.value);
         }}
         placeholder="description"
-        className="p-2 mt-5 bg-gray-800 rounded-2xl w-3/4 text-white font-medium text-lg  focus:outline focus:outline-slate-700"
+        className="p-2 mt-5 bg-gray-800 rounded-2xl w-3/4 text-white font-medium text-lg  focus:outline focus:outline-green-600"
       />
       <div className="flex justify-center item-center mt-10">
         <button
