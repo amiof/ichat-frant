@@ -17,7 +17,7 @@ function Navb({ search }) {
           ></img>
           <div className="hidden w-40 h-56 absolute border-slate-600 border top-10 left-16 z-20 bg-slate-800 rounded-xl group-hover:inline-block">
             <ul className="text-white mt-5">
-              <li className="mt-5 hover:text-red-600 cursor-pointer">change pic</li>
+              <li className="mt-5 hover:text-red-600 cursor-pointer ">change pic</li>
               <li className="mt-5 hover:text-red-600">change number </li>
               <li className="mt-5 hover:text-red-600">logout </li>
               <li></li>
@@ -29,7 +29,7 @@ function Navb({ search }) {
           <p className="ml-3 text-gray-500">{phoneNumber}</p>
         </div>
       </div>
-      <div className="m-5 lg:m-5 w-full lg:max-w-fit lg:w-auto  border border-white ">
+      <div className="m-5 lg:m-5 w-full lg:max-w-fit lg:w-auto">
         <Search search={search}></Search>
       </div>
     </div>
