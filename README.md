@@ -6,7 +6,7 @@ ichat
   <a href="http://www.lua.org">
     <img
       alt="javaScript"
-      src="https://img.shields.io/badge/Js-%2357A143.svg?&style=for-the-badge&logo=JavaScript&logoColor=yellow"
+      src="https://img.shields.io/badge/javaScript-red.svg?&style=for-the-badge&logo=JavaScript&logoColor=yellow"
     />
   </a>
   <a href="https://neovim.io/">
