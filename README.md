@@ -1,5 +1,5 @@
 <h1 align="center">
-🌈 NeoColumn.nvim
+ichat
 </h1>
 
 <p align="center">
@@ -17,7 +17,7 @@
   </a>
 </p>
 
-![demo](https://raw.githubusercontent.com/ecthelionvi/Images/main/NeoColumn.gif)
+![demo](https://github.com/amiof/images/blob/main/ichat-frontend.gif)
 
 ## 📢 Introduction
 
