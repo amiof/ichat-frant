@@ -5,8 +5,8 @@ ichat
 <p align="center">
   <a href="http://www.lua.org">
     <img
-      alt="Lua"
-      src="https://img.shields.io/badge/Lua-blue.svg?style=for-the-badge&logo=lua"
+      alt="javaScript"
+      src="https://img.shields.io/badge/-javascript-red"
     />
   </a>
   <a href="https://neovim.io/">
