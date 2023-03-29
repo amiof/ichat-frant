@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+<h1 align="center">
+🌈 NeoColumn.nvim
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="http://www.lua.org">
+    <img
+      alt="Lua"
+      src="https://img.shields.io/badge/Lua-blue.svg?style=for-the-badge&logo=lua"
+    />
+  </a>
+  <a href="https://neovim.io/">
+    <img
+      alt="Neovim"
+      src="https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white"
+    />
+  </a>
+</p>
 
-## Available Scripts
+![demo](https://raw.githubusercontent.com/ecthelionvi/Images/main/NeoColumn.gif)
 
-In the project directory, you can run:
+## 📢 Introduction
 
-### `npm start`
+NeoColumn is a Neovim plugin that shows a focused ColorColumn at a specific position to manage line length. It highlights individual characters, minimizing clutter and enhancing readability
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## ✨ Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Displays a focused ColorColumn at the desired position
+- Toggle NeoColumn on and off
 
-### `npm test`
+## 💾 Persistence
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+NeoColumn maintains the ColorColumn settings for each file, including visibility and position, across sessions.
 
-### `npm run build`
+## 🛠️ Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To toggle NeoColumn on and off, you can use the `ToggleNeoColumn` command:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```vim
+:ToggleNeoColumn
+```
+You can also create a keybinding to toggle NeoColumn more conveniently:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```lua
+vim.keymap.set("n", "<leader>h", "<cmd>ToggleNeoColumn<cr>", { noremap = true, silent = true })
+```
 
-### `npm run eject`
+To clear the list of enabled files in NeoColumn, you can use the `ClearNeoColumn` command:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```vim
+:ClearNeoColumn
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📦 Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Install via your favorite package manager.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [lazy.nvim](https://github.com/folke/lazy.nvim)
+```Lua
+{
+  "ecthelionvi/NeoColumn.nvim",
+  opts = {}
+},
+```
 
-## Learn More
+- [packer.nvim](https://github.com/wbthomason/packer.nvim)
+```Lua
+use "ecthelionvi/NeoColumn.nvim"
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Setup the plugin in your `init.lua`. This step is not needed with lazy.nvim if `opts` is set as above.
+```Lua
+require("NeoColumn").setup()
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔧 Configuration
 
-### Code Splitting
+You can pass your config table into the `setup()` function or `opts` if you use lazy.nvim.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The available options:
 
-### Analyzing the Bundle Size
+- `NeoColumn` (string) : the character position at which the ColorColumn appears
+  - `"80"` (default)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Default Config
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```Lua
+local config = {
+  NeoColumn = "80",
+}
+```
