@@ -12,7 +12,7 @@ ichat
   <a href="https://react.dev/">
     <img
       alt="reactjs"
-      src="https://img.shields.io/badge/ReactJs-%2357A143.svg?&style=for-the-badge&logo=React&logoColor=white"
+      src="https://img.shields.io/badge/ReactJs-blue.svg?&style=for-the-badge&logo=React&logoColor=white"
     />
   </a>
 </p>
