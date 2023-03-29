@@ -21,12 +21,12 @@ ichat
 
 ## 📢 Introduction
 
-NeoColumn is a Neovim plugin that shows a focused ColorColumn at a specific position to manage line length. It highlights individual characters, minimizing clutter and enhancing readability
+ichat is a reactjs  projct allow you sign in and chat whit users . it now have many bug and it is in develope :)
 
 ## ✨ Features
 
-- Displays a focused ColorColumn at the desired position
-- Toggle NeoColumn on and off
+- add group and chat in group 
+- nothing ...
 
 ## 💾 Persistence
 
@@ -34,38 +34,23 @@ NeoColumn maintains the ColorColumn settings for each file, including visibility
 
 ## 🛠️ Usage
 
-To toggle NeoColumn on and off, you can use the `ToggleNeoColumn` command:
+for running ichat-frontend  you need  `ichat-backend` you cant get it from my github :
 
-```vim
-:ToggleNeoColumn
-```
-You can also create a keybinding to toggle NeoColumn more conveniently:
+- [ichat-backend](https://github.com/amiof/ichat-backend.git)
 
-```lua
-vim.keymap.set("n", "<leader>h", "<cmd>ToggleNeoColumn<cr>", { noremap = true, silent = true })
-```
 
-To clear the list of enabled files in NeoColumn, you can use the `ClearNeoColumn` command:
-
-```vim
-:ClearNeoColumn
-```
 
 ## 📦 Installation
 
-1. Install via your favorite package manager.
+1. after clone you can install dependency 
 
-- [lazy.nvim](https://github.com/folke/lazy.nvim)
-```Lua
-{
-  "ecthelionvi/NeoColumn.nvim",
-  opts = {}
-},
+
+```js
+npm install 
 ```
-
-- [packer.nvim](https://github.com/wbthomason/packer.nvim)
-```Lua
-use "ecthelionvi/NeoColumn.nvim"
+after install dependencyes you cant start project : 
+```Js
+npm start 
 ```
 
 2. Setup the plugin in your `init.lua`. This step is not needed with lazy.nvim if `opts` is set as above.
