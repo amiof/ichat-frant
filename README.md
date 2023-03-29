@@ -11,8 +11,8 @@ ichat
   </a>
   <a href="https://neovim.io/">
     <img
-      alt="Neovim"
-      src="https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white"
+      alt="reactjs"
+      src="https://img.shields.io/badge/ReactJs-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white"
     />
   </a>
 </p>
