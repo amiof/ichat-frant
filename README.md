@@ -6,7 +6,7 @@ ichat
   <a href="https://www.javascript.com/">
     <img
       alt="javaScript"
-      src="https://img.shields.io/badge/javaScript-red.svg?&style=for-the-badge&logo=JavaScript&logoColor=yellow"
+      src="https://img.shields.io/badge/javaScript-yellow.svg?&style=for-the-badge&logo=JavaScript&logoColor=red"
     />
   </a>
   <a href="https://react.dev/">
