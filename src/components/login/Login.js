@@ -15,7 +15,7 @@ function Login() {
   };
   const [fetchQuery, { data }] = useLazyQuery(LOGIN);
 
-  const [cookie, setCookie] = useCookies("userData");
+  const [_, setCookie] = useCookies("userData");
   setCookie("userData", data);
   const SendHandler = () => {
     if (username && password) {

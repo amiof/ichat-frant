@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-import { toast, ToastContainer } from "react-toastify";
 import AddChannel from "./AddChannel";
 import AddGroup from "./addGroup";
 import AddUserToGroup from "./addUserToGroup";
@@ -19,13 +17,13 @@ function Modal({ open, children, close, componentModal }) {
         <button onClick={close} className="text-red-600 font-bold ml-5">
           x
         </button>
-        {componentModal == "AddChannel" ? <AddChannel></AddChannel> : null}
-        {componentModal == "AddUserToGroup" ? <AddUserToGroup></AddUserToGroup> : null}
-        {componentModal == "editPic" ? <EditPic></EditPic> : null}
-        {componentModal == "editTitle" ? <EditTitle></EditTitle> : null}
-        {componentModal == "remove" ? <Remove></Remove> : null}
-        {componentModal == "newMessage" ? <NewMessage></NewMessage> : null}
-        {componentModal == "newGroup" ? <AddGroup></AddGroup> : null}
+        {componentModal === "AddChannel" ? <AddChannel></AddChannel> : null}
+        {componentModal === "AddUserToGroup" ? <AddUserToGroup></AddUserToGroup> : null}
+        {componentModal === "editPic" ? <EditPic></EditPic> : null}
+        {componentModal === "editTitle" ? <EditTitle></EditTitle> : null}
+        {componentModal === "remove" ? <Remove></Remove> : null}
+        {componentModal === "newMessage" ? <NewMessage></NewMessage> : null}
+        {componentModal === "newGroup" ? <AddGroup></AddGroup> : null}
       </div>
     </>
   );

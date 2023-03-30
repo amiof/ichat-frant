@@ -1,15 +1,24 @@
 import { useMutation } from "@apollo/client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ADD_USER_IN_ROOM } from "../graphql/mutation";
+import { notification } from "../utils/utils";
 
 const AddUserToGroup = () => {
   const [username, setUsername] = useState("");
   const [endPoint, setEndpoint] = useState("");
-  const [sendData, { data, loading, error }] = useMutation(ADD_USER_IN_ROOM, {
+  const [sendData, { data, error }] = useMutation(ADD_USER_IN_ROOM, {
     variables: { username, endPoint },
   });
-  console.log(data);
-  console.log(error);
+
+  useEffect(() => {
+    console.log("data", data, "error", error);
+    notification(
+      data,
+      error,
+      "user added to group",
+      "a error has occured check your username and endpoint and try again"
+    );
+  }, [data, error]);
   return (
     <div className="h-full relative">
       <div className="w-full flex justify-center  items-center">

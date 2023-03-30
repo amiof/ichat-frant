@@ -13,7 +13,7 @@ const socketio = socketIO.connect("http://localhost:3500");
 export const user_Data = createContext();
 function Home() {
   const [componentModal, setComponentModal] = useState("");
-  const [cookies, setCookies] = useCookies("userData");
+  const [cookies] = useCookies("userData");
   const [showModal, setShowModal] = useState(false);
   // console.log("userdata:", cookies);
   const { username } = cookies?.userData.login[0];

@@ -4,7 +4,7 @@ function Search(prop) {
     setSearch(e.target.value);
   };
   return (
-    <div className="w-full flex items-center ">
+    <div className="w-full flex items-center lg:w-auto">
       <input
         onChange={searchHandler}
         type="text"
