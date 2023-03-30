@@ -5,13 +5,13 @@ import App from "./App";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { BrowserRouter } from "react-router-dom";
 import { CookiesProvider } from "react-cookie";
-const clinet = new ApolloClient({
+const client = new ApolloClient({
   uri: "http://localhost:3500/graphql",
   cache: new InMemoryCache(),
 });
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <ApolloProvider client={clinet}>
+  <ApolloProvider client={client}>
     <CookiesProvider>
       <BrowserRouter>
         <App />
