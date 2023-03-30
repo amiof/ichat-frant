@@ -28,9 +28,7 @@ ichat is a reactjs  projct allow you sign in and chat whit users . it now have m
 - add group and chat in group 
 - nothing ...
 
-## 💾 Persistence
 
-NeoColumn maintains the ColorColumn settings for each file, including visibility and position, across sessions.
 
 ## 🛠️ Usage
 
@@ -48,29 +46,16 @@ for running ichat-frontend  you need  `ichat-backend` you cant get it from my gi
 ```js
 npm install 
 ```
-after install dependencyes you cant start project : 
+2.after install dependencyes you cant start project : 
 ```Js
 npm start 
 ```
 
-2. Setup the plugin in your `init.lua`. This step is not needed with lazy.nvim if `opts` is set as above.
-```Lua
-require("NeoColumn").setup()
-```
+
 
 ## 🔧 Configuration
 
-You can pass your config table into the `setup()` function or `opts` if you use lazy.nvim.
+add your url graphql in index.js file i use   `uri: "http://localhost:3500/graphql"` in this project ,
 
-The available options:
 
-- `NeoColumn` (string) : the character position at which the ColorColumn appears
-  - `"80"` (default)
 
-### Default Config
-
-```Lua
-local config = {
-  NeoColumn = "80",
-}
-```
