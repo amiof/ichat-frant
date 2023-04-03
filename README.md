@@ -14,6 +14,19 @@ ichat
       alt="reactjs"
       src="https://img.shields.io/badge/ReactJs-blue.svg?&style=for-the-badge&logo=React&logoColor=white"
     />
+  </a> 
+  </a>
+    <a href="">
+    <img
+      alt="graphql"
+      src="https://img.shields.io/badge/graphql-red.svg?&style=for-the-badge&logo=graphql&logoColor=white"
+    />
+  </a>
+    <a href="">
+    <img
+      alt="socket.io"
+      src="https://img.shields.io/badge/socket.io-yellow.svg?&style=for-the-badge&logo=Socket.io&logoColor=white"
+    />
   </a>
 </p>
 
