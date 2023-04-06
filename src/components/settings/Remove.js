@@ -3,7 +3,7 @@ import React from "react";
 const Remove = () => {
   return (
     <div>
-      <h1 className="text-white mt-24 text-center">do yo realy want delete this group ?</h1>
+      <h1 className="text-white mt-24 text-center">do yo really want delete this group ?</h1>
 
       <button
         type="submit"

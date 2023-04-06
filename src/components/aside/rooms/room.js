@@ -1,13 +1,17 @@
 import { useLazyQuery } from "@apollo/client";
-import React, { useState } from "react";
+import React, { createContext, useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { roomSelected } from "../../../redux/room/RoomAction";
 import Menubar from "./menubar";
 
 function Room({ room, settselector, selectedColor }) {
   const { name, id, endPoint, title, pic } = room;
   const [selected, setSelected] = useState(false);
   // console.log(selectedColor);
+  const Dispatch = useDispatch();
   const clickHandler = () => {
+    Dispatch(roomSelected(name, id, endPoint, title, pic));
     setSelected(true);
     settselector(id);
   };
