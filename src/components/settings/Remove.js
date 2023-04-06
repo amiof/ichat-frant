@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 const Remove = () => {
-  const roomData = useSelector((state) => state);
+  const roomData = useSelector((state) => state.roomData);
   console.log("roomData", roomData);
   return (
     <div>
