@@ -1,6 +1,9 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Remove = () => {
+  const roomData = useSelector((state) => state);
+  console.log("roomData", roomData);
   return (
     <div>
       <h1 className="text-white mt-24 text-center">do yo really want delete this group ?</h1>

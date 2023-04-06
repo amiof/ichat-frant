@@ -19,7 +19,7 @@ function Room({ room, settselector, selectedColor }) {
   return (
     <Link to={endPoint} onClick={clickHandler}>
       <div className={selected && id == selectedColor ? "flex bg-violet-900 rounded-3xl" : "flex"}>
-        <div className="relative group">
+        <div className="relative group" onMouseEnter={clickHandler}>
           <img
             src={pic}
             className="h-14 w-14 rounded-full outline outline-slate-400 relative hover:outline-red-600"
