@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 
 const Remove = () => {
   const roomData = useSelector((state) => state.roomData);
-  console.log("roomData", roomData);
+  // console.log("roomData", roomData);
   return (
     <div>
       <h1 className="text-white mt-24 text-center">do yo really want delete this group ?</h1>
