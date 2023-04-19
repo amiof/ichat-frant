@@ -40,7 +40,8 @@ ichat is a reactjs  projct allow you sign in and chat whit users . it now have m
 
 - use socket.io 
 - use graphql 
-- use express
+- use react 
+- ....
 
 
 
