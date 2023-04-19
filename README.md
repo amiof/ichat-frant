@@ -38,8 +38,9 @@ ichat is a reactjs  projct allow you sign in and chat whit users . it now have m
 
 ## ✨ Features
 
-- add group and chat in group 
-- nothing ...
+- use socket.io 
+- use graphql 
+- use express
 
 
 
