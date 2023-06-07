@@ -2,7 +2,8 @@ import { useLazyQuery } from "@apollo/client";
 import React, { createContext, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { roomSelected } from "../../../redux/room/RoomAction";
+import { roomSelector } from "../../../redux/feature/RoomSlice";
+// import { roomSelected } from "../../../redux/room/RoomAction";
 import Menubar from "./menubar";
 
 function Room({ room, settselector, selectedColor }) {
@@ -11,7 +12,7 @@ function Room({ room, settselector, selectedColor }) {
   // console.log(selectedColor);
   const Dispatch = useDispatch();
   const clickHandler = () => {
-    Dispatch(roomSelected(name, id, endPoint, title, pic));
+    Dispatch(roomSelector({name, id, endPoint, title, pic}));
     setSelected(true);
     settselector(id);
   };
@@ -39,3 +40,4 @@ function Room({ room, settselector, selectedColor }) {
 }
 
 export default Room;
+

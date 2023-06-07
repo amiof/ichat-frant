@@ -6,7 +6,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { BrowserRouter } from "react-router-dom";
 import { CookiesProvider } from "react-cookie";
 import { Provider } from "react-redux";
-import store from "./redux/store";
+import  store  from "./redux/store";
 const client = new ApolloClient({
   uri: "http://localhost:3500/graphql",
   cache: new InMemoryCache(),

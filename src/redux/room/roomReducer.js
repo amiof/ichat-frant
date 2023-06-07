@@ -1,3 +1,5 @@
+// NOTE: this code is old before add redux-toolkit and now dont need this
+
 const initalState = {
   name: "",
   id: "",
@@ -15,3 +17,4 @@ const roomReducer = (state = initalState, action) => {
 };
 
 export default roomReducer;
+
